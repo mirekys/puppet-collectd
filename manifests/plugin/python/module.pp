@@ -11,7 +11,7 @@ define collectd::plugin::python::module (
   include ::collectd
   include ::collectd::plugin::python
 
-  validate_array($config)
+  validate_hash($config)
 
   $module_dir = $modulepath ? {
     undef   => $collectd::python_dir,

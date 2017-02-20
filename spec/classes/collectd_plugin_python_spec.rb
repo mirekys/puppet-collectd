@@ -81,7 +81,7 @@ describe 'collectd::plugin::python', type: :class do
               'config'        => [{ 'Cluster' => 'ES-clust' }, { 'Cluster' => 'Another-ES-clust' }]
             },
             'foo' => {
-              'config' => [{ 'Verbose' => true, 'Bar' => '"bar"' }]
+              'config' => { 'Verbose' => true, 'Bar' => '"bar"' }
             }
           }
         }

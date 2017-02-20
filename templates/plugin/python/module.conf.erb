@@ -1,10 +1,9 @@
   <%- require 'shellwords' -%>
   Import "<%= @_module_import %>"
 
-  <%- @config.each do |configuration| -%>
 
   <Module "<%= @module %>">
-  <%- configuration.sort.each do |key,value| -%>
+  <%- @config.sort.each do |key,value| -%>
   <%- if value.is_a?(Array) -%>
   <%- value.sort.each do |v| -%>
     <%= key %> <% if !!v == v %><%= v %><% else %>"<%= Shellwords.split(v).join('" "') %>"<% end %>
